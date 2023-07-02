@@ -16,7 +16,7 @@ export class EmployeeComponent implements OnInit{
     office: '',
     position: '',
     salary: 0,
-    _id: ''
+    _id: undefined
   }
 
   constructor(public employeeService: EmployeeService) {}
@@ -56,7 +56,7 @@ export class EmployeeComponent implements OnInit{
     });
   }
 
-  loadEmployee(employee: Employee) {debugger;
+  loadEmployee(employee: Employee) {
     this.selectedEmployee = JSON.parse(JSON.stringify(employee));
   }
 
